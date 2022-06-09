@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# From a long ago era when I ran Arch, btw :)
+if [ ! -f /usr/bin/pacman ]; then
+  sudo apt install vim -y
+else 
+  sudo pacman -S vim
+fi
+
+mkdir -p ~/.vim/bundle 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo
+echo "Now run !VundleInstall in Vim."
+echo
